@@ -7,7 +7,6 @@ func main() {
 }
 
 func factorial(i uint) uint {
-
 	var fact uint = 1
 	for i > 0 {
 		fact *= i
