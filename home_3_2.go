@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	sliceWords := []string{"one", "thr22", "two", "three", "thr33"}
+	sliceWords := []string{"one", "thr22", "two", "three3333", "thr33"}
 	fmt.Println(max(sliceWords))
 
 	sliceNum := []int64{0, 1, 2, 4, 5, 67, 8}
@@ -18,13 +18,11 @@ func main() {
 func max(slice []string) string {
 	lenSrt := 0
 	var elem string
-	maxLen := 0
 	for _, v := range slice {
 
 		lenSrt = utf8.RuneCountInString(v)
 
-		if maxLen < lenSrt {
-			maxLen = lenSrt
+		if len(elem) < lenSrt {
 			elem = v
 		}
 	}
