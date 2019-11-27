@@ -10,12 +10,12 @@ func main() {
 	b := map[int]string{2: "a", 0: "b", 1: "c"}
 
 	printSorted(a)
+	fmt.Println("-------------------------")
 	printSorted(b)
 }
 
 func printSorted(x map[int]string) {
 
-	newMap := make(map[int]string)
 	arKeys := make([]int, 0, len(x))
 	for k := range x {
 		arKeys = append(arKeys, k)
@@ -25,9 +25,8 @@ func printSorted(x map[int]string) {
 
 	for _, v := range arKeys {
 
-		newMap[v] = x[v]
+		fmt.Printf("%v: ", v)
+		fmt.Println(x[v])
 	}
-
-	fmt.Println(newMap)
 
 }
