@@ -22,7 +22,7 @@ func max(slice []string) string {
 
 		lenSrt = utf8.RuneCountInString(v)
 
-		if len(elem) < lenSrt {
+		if utf8.RuneCountInString(elem) < lenSrt {
 			elem = v
 		}
 	}
