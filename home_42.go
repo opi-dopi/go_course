@@ -11,15 +11,15 @@ type Figure interface {
 }
 
 type Square struct {
-	x, y float64
+	x float64
 }
 
 func (square Square) area() float64 {
-	return square.x * square.y
+	return square.x * square.x
 }
 
 func (square Square) perimeter() float64 {
-	return square.x*2 + square.y*2
+	return square.x*2 + square.x*2
 }
 
 type Circle struct {
@@ -27,15 +27,15 @@ type Circle struct {
 }
 
 func (circle Circle) area() float64 {
-	return math.Floor(math.Pi*math.Pow(circle.r, 2)*100) / 100
+	return math.Pi*math.Pow(circle.r, 2)
 }
 
 func (circle Circle) perimeter() float64 {
-	return math.Floor(2*math.Pi*circle.r*100) / 100
+	return 2*math.Pi*circle.r*100
 }
 
 func main() {
-	var s Figure = Square{2, 2}
+	var s Figure = Square{2}
 	var c Figure = Circle{5}
 
 	fmt.Println(s.area(), s.perimeter())
