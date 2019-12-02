@@ -31,12 +31,12 @@ func (circle Circle) area() float64 {
 }
 
 func (circle Circle) perimeter() float64 {
-	return 2*math.Pi*circle.r*100
+	return 2*math.Pi*circle.r
 }
 
 func main() {
 	var s Figure = Square{2}
-	var c Figure = Circle{5}
+	var c Figure = Circle{2}
 
 	fmt.Println(s.area(), s.perimeter())
 	fmt.Println(c.area(), c.perimeter())
